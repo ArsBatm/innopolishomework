@@ -5,12 +5,13 @@ package lesson4;
 
         int [] factor = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
 //        массив для подсчета
+        for (int firstNumber = 1; firstNumber < factor.length; firstNumber++){
+            System.out.print("\n" + firstNumber + "\n ");
 
-        for (int firstNumber = 0; firstNumber < factor.length; firstNumber++){
-            System.out.println( firstNumber + " | ");
-            for (int secondNumber = 0; secondNumber < factor.length; secondNumber++){
-                System.out.println((secondNumber*firstNumber) + '\n');
+            for (int secondNumber = 1; secondNumber < factor.length; secondNumber++){
+                System.out.print(secondNumber*firstNumber +" ");
             }
         }
+//        как выв
     }
 }
