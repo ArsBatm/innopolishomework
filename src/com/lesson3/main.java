@@ -1,7 +1,7 @@
 /* Первое домашнее задание
 *подсчет стоимости бензина
  */
-package com.lesson3;
+package lesson3;
 import java.util.Scanner;
 
 public class main extends Object {

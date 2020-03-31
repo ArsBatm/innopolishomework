@@ -1,7 +1,7 @@
-package com.lesson3;
+package lesson3;
 import java.util.Scanner;
 
-class task3 {
+class Task3 {
     public static void main(String args[]){
         int rawSalary;
         //Заработная плата до вычета налогов
