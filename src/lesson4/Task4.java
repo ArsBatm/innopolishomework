@@ -4,14 +4,15 @@ import java.util.Scanner;
 public class Task4 {
     public static void main(String[] args) {
 
-        int firstMember, n, step, nMember;
+        double firstMember, step, nMember;
+        int n;
 
         System.out.println("Напишите первый член прогрессии");
         Scanner in = new Scanner(System.in);
-        firstMember = in.nextInt();
+        firstMember = in.nextDouble();
 
         System.out.println("Напишите шаг/знаменатель прогрессии");
-        step = in.nextInt();
+        step = in.nextDouble();
 
         System.out.println("Напишите кол-во шагов прогрессии");
         n = in.nextInt();
