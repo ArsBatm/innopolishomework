@@ -1,10 +1,10 @@
 /* Первое домашнее задание
 *подсчет стоимости бензина
  */
-package lesson3;
+package innopolis.java.lesson3.task1;
 import java.util.Scanner;
 
-public class main extends Object {
+public class Task1 extends Object {
     public static void main(String args[]) {
         double priceForLiter;
         //цена за 1 литр бензина
@@ -13,10 +13,10 @@ public class main extends Object {
 
         System.out.println("Введите цену за 1 литр");
         Scanner in = new Scanner(System.in);
-        priceForLiter = in.nextInt();
+        priceForLiter = in.nextDouble();
 
         System.out.println("Введите количество литров");
-        amount = in.nextInt();
+        amount = in.nextDouble();
 
         double price = priceForLiter*amount;
         //итоговая сумма

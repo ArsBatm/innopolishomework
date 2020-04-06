@@ -1,14 +1,14 @@
-package lesson4;
+package innopolis.java.lesson4.task3;
 
  class Task3 {
     public static void main(String[] args){
 
-        int [] factor = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+        int factor = 11;
 //        массив для подсчета
-        for (int firstNumber = 1; firstNumber < factor.length; firstNumber++){
+        for (int firstNumber = 1; firstNumber < factor; firstNumber++){
             System.out.print("\n" + firstNumber + "\n ");
 
-            for (int secondNumber = 1; secondNumber < factor.length; secondNumber++){
+            for (int secondNumber = 1; secondNumber < factor; secondNumber++){
                 System.out.print(secondNumber*firstNumber +" ");
             }
         }

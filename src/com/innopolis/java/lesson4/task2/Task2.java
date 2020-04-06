@@ -1,4 +1,4 @@
-package lesson4;
+package innopolis.java.lesson4.task2;
 import java.util.Scanner;
 
 class Task2 {
