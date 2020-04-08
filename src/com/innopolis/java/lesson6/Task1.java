@@ -2,48 +2,50 @@ package innopolis.java.lesson6;
 
 
 public class Task1 {
-    //класс (условно) какой-то магазин
-    public static class Shop {
-        public String brand;
-        //        название бренда
-        public int seller;
-        //        кол-во продавцов
-        public int product;
-//        кол-во продаваемой продукции
 
-        Shop(String name, int count, int goods) {
-            name = brand;
-            count = seller;
-            goods = product;
+    static class Shop {
+        Seller sell = new Seller();
+        Product prod = new Product();
+
+        private String brand;
+
+        public String getBrand() {
+            return brand;
         }
 
-        /*        формула рассчета зарплаты продавцов в магазине,
-                где зарплата рассчитывается как среднее двойного кол-во продукции, продаваемой за неделю *
-                * на коэф от продаж * на кол-во продавцов + стабильный оклад
-         */
-        private int profit() {
-            int salary = seller * (product * 5 + 15000);
-            return salary;
+        public void setBrand(String brand) {
+        this.brand = brand;
         }
-    }
 
+        private int salary;
 
-    public static void main(String[] args) {
-        Shop newShop = new Shop("shop", 1, 1);
-//        Ввести название магаза
-        newShop.brand = " Обувь на все времена";
-//        Ввести кол-во продавцов
-        newShop.seller = 10;
-//        Ввести кол-во продукции
-        newShop.product = 5;
-        newShop.profit();
-
-        System.out.println("В магазине: " + newShop.brand);
-        System.out.println("Кол-во продавцов: " + newShop.seller);
-        System.out.println("В среднем продают товаров: " + newShop.product);
-        System.out.println("Начислить заработную плату в размере: " + newShop.profit());
+     public int getSalary(){
+         return salary = sell.getSeller() * (prod.getProduct() * 5 + 15000);
+     }
 
     }
 }
 
+ class Seller {
+    private int seller;
 
+     public void setSeller(int seller) {
+         this.seller = seller;
+     }
+
+    public int getSeller() {
+        return seller;
+    }
+}
+
+class Product{
+    private int product;
+
+    public void setProduct(int product){
+        this.product = product;
+    }
+
+    public int getProduct() {
+        return product;
+    }
+}
