@@ -5,10 +5,12 @@ class Seller {
    private int seller;
 
     public void setSeller(int seller) {
-        this.seller = seller;
+        this.seller = 1;
     }
 
    public int getSeller() {
-       return seller;
+        return seller;
    }
+   
+    String [] name = {};
 }

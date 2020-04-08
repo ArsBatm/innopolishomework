@@ -1,11 +1,16 @@
 package innopolis.java.lesson6;
 
 
-public class Task1 {
-// объявление названия магазина и формула для рассчета
-    static class Shop {
 
-       public Shop (Seller seller, Product product){}
+// объявление названия магазина и формула для рассчета
+class Shop {
+
+       public Shop (Seller seller){
+
+       }
+
+
+
 //Название магазина
         private String brand;
 
@@ -18,8 +23,9 @@ public class Task1 {
         }
 
         private int salary;
+        public void setSalary(int salary){
+        }
 
 
     }
-}
 

@@ -5,10 +5,13 @@ class Product{
     private int product;
 
     public void setProduct(int product){
-        this.product = product;
+        this.product = 1;
     }
 
     public int getProduct() {
         return product;
     }
+
+    String nameSecond;
+
 }
