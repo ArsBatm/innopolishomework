@@ -1,7 +1,9 @@
 package innopolis.java.lesson6;
 
-//кол-во продукции, продаваемой за неделю в магазине
 public class Product{
+    /*Кол-во товаров, продаваемое
+    в магазине всеми сотрудниками за месяц
+     */
     private int product;
 
     public Product (int product){

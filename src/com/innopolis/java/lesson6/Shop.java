@@ -1,12 +1,11 @@
 package innopolis.java.lesson6;
 
 
-// объявление названия магазина 
 public class Shop {
 
     //Название магазина
     private String brand;
-//    объявление массивов продавцов и товаров
+//    Объявление массивов продавцов и товаров
     private Seller[] sellers;
     private Product[] products;
 
@@ -14,6 +13,7 @@ public class Shop {
     public Shop(Seller[] sellers, Product[] products, String brand) {
         this.sellers = sellers;
         this.products = products;
+        this.brand = brand;
     }
 
     public Seller[] getSellers() {
