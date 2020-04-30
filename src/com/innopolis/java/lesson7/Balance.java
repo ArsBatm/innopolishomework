@@ -20,11 +20,6 @@ public class Balance {
                 listCommands();
                 continue;
             }
-
-            else {
-                System.out.println("Введите корректную команду");
-            }
-
             int commandIndex = Integer.parseInt(com);
             if (commandIndex < 1) {
                 System.out.println("Попробуйте ввести другое число");
