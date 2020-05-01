@@ -3,7 +3,7 @@ package innopolis.java.lesson9.task2;
 
 interface Run {
 
-    void canRun();
+    void run();
 
 }
 

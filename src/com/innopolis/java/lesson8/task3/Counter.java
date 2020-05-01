@@ -1,7 +1,7 @@
 package innopolis.java.lesson8.task3;
 
 public class Counter {
-//    реализуем счетчик
+    //    реализуем счетчик
     public static void main(String[] args) {
 //        тест 1, без значений
         System.out.println(Methods.getCount());

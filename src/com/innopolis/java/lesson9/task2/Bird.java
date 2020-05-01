@@ -1,9 +1,9 @@
 package innopolis.java.lesson9.task2;
 
-class Bird  implements Fly {
-//  иницилизация  способностей птицы
+public class Bird  implements Fly {
 
-       public void canFly(){
+    @Override
+       public void fly(){
            System.out.println("Can fly");
        }
 }

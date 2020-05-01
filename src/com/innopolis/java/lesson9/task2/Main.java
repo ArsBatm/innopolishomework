@@ -7,14 +7,14 @@ public class Main {
         Duck duck = new Duck();
 //вывод на консоль  способности что-то делать определенное животное
         System.out.println("bird information");
-        bird.canFly();
+        bird.fly();
 
         System.out.println("Cat information");
-        cat.canRun();
+        cat.run();
 
         System.out.println("Duck information");
-        duck.canFly();
-        duck.canRun();
-        duck.canSwim();
+        duck.fly();
+        duck.run();
+        duck.swim();
     }
 }

@@ -16,7 +16,7 @@ public class Balance {
             System.out.println("Введите номер команды или help для вывода списка доступных команд");
             String com = inputScanner.next();
 
-            if (com.equals("help")) {
+            if (com.toLowerCase().equals("help")) {
                 listCommands();
                 continue;
             }

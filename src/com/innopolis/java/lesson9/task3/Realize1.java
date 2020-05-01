@@ -1,5 +1,7 @@
 package innopolis.java.lesson9.task3;
-//     Реализация методов
+/**
+ * Женщина
+ */
 public class Realize1 extends Human {
 
     @Override
@@ -15,7 +17,6 @@ public class Realize1 extends Human {
     @Override
     public void fastSwim() {
         System.out.println("Человек плавает быстро");
-
     }
 
     @Override

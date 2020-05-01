@@ -3,7 +3,7 @@ package innopolis.java.lesson9.task2;
 
 interface Swim {
 
-    void canSwim();
+    void swim();
 
 }
 

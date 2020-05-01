@@ -3,15 +3,15 @@ package innopolis.java.lesson9.task2;
 class Duck  implements Swim, Run, Fly {
 //  иницилизация способностей утки
 
-    public void canFly() {
+    public void fly() {
         System.out.println("Can fly");
 
     }
-    public void canSwim() {
+    public void swim() {
         System.out.println("Can swim");
 
     }
-    public void canRun() {
+    public void run() {
         System.out.println("Can run");
     }
 

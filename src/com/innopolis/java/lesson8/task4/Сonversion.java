@@ -1,12 +1,17 @@
 package innopolis.java.lesson8.task4;
 
+/**
+ * Объявление класса конвертации
+ */
 public class Сonversion {
-    public  static  Act convert (Contract contract){
 
-        System.out.println(contract.getConNumber());
-        System.out.println(contract.getConData());
-        System.out.println(contract.getConProductList());
-        return null;
+    /**
+     * Объяаление метода конвертации
+     */
+
+    public static Act convert(Contract contract) {
+
+        return new Act(contract.getConNumber(), contract.getConData(), contract.getConProductList());
     }
 }
 
