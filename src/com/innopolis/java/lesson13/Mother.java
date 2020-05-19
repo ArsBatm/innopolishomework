@@ -1,13 +1,11 @@
 package innopolis.java.lesson13;
 
 import java.util.Scanner;
-
 /**
  * Класс матери, который предлагает еду и получает реакцию
  */
 public class Mother {
     private static Scanner inScanner = new Scanner(System.in);
-
     public static void main(String[] args) {
 
         Child child = new Child();
