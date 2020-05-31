@@ -33,14 +33,21 @@ public class Balance {
             System.out.println("Введите номер команды или help для вывода списка доступных команд");
             String com = inputScanner.next();
 
-            if (com.toLowerCase().equals("help")) {
-                logr.log(Level.INFO, "Введено слово help");
-                listCommands();
+                   if (com.toLowerCase().equals("help")) {
+                       logr.log(Level.INFO, "Введено слово help");
+                       listCommands();
+                       continue;
+                   }
+
+
+            int commandIndex;
+            try {
+                commandIndex = Integer.parseInt(com);
+            } catch (NumberFormatException nf){
+                logr.log(Level.WARNING, "Введено не число для выбора пункта меню", nf);
+                System.out.println("введено не число");
                 continue;
             }
-
-
-            int commandIndex = Integer.parseInt(com);
             logr.log(Level.INFO, "Введено число для выбора пункта меню");
             if (commandIndex < 1) {
                 System.out.println("Попробуйте ввести другое число");
