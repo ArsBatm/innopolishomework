@@ -24,10 +24,10 @@ public class FileCreated {
         File file1 = new File(f1);
         File file2 = new File(f2);
 /*
-Залание директорий
+Задание директорий
  */
-        Path firstDir = Paths.get("path1\\ntn.txt");
-        Path secondDir = Paths.get("path2\\newPath");
+        Path firstDir = Paths.get("./");
+        Path secondDir = Paths.get("./");
 /*
     Блок, в котором создают файл
  */
@@ -56,15 +56,18 @@ public class FileCreated {
             System.out.println("Файл скопирован");
         } catch (IOException e) {
             System.out.println(e.getMessage());
-        }
 /*
     Блок, в котором удалют файл
  */
-        try {
-            Files.delete(Paths.get(f1));
-            System.out.println("Файл удален");
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
+
+            try {
+                System.out.println("Файл удален");
+                Files.delete(Paths.get(f1));
+                Files.delete(Paths.get(f2));
+            } catch (IOException ex) {
+                System.out.println(ex.getMessage());
+            }
+
         }
     }
 }
