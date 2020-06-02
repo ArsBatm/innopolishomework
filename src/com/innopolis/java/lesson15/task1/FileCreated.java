@@ -56,6 +56,7 @@ public class FileCreated {
             System.out.println("Файл скопирован");
         } catch (IOException e) {
             System.out.println(e.getMessage());
+        }
 /*
     Блок, в котором удалют файл
  */
@@ -63,11 +64,10 @@ public class FileCreated {
             try {
                 System.out.println("Файл удален");
                 Files.delete(Paths.get(f1));
-                Files.delete(Paths.get(f2));
             } catch (IOException ex) {
                 System.out.println(ex.getMessage());
             }
 
-        }
+
     }
 }
