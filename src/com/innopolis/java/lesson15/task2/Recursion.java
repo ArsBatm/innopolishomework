@@ -2,6 +2,7 @@ package innopolis.java.lesson15.task2;
 
 import java.io.File;
 
+
 public class Recursion {
     public static void main(String[] args) {
 /*
@@ -11,7 +12,7 @@ public class Recursion {
 /*
 Создает директорию, которую будет обходить метод
  */
-        String catalog = "rec\\";
+        String catalog = "./";
         File directory = new File(catalog);
 /*
 Вызов метода обхода переданной дирректории
