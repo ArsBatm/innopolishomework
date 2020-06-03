@@ -5,14 +5,13 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Scanner;
 
 /**
  * Класс создающий, переименовывающий, копирующий и удаляющий файл
  */
 public class FileCreated {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 /*
     Объявление имени 1 и 2 файлов
  */
@@ -26,20 +25,19 @@ public class FileCreated {
 /*
 Задание директорий
  */
-        Path firstDir = Paths.get("./");
-        Path secondDir = Paths.get("./");
 /*
     Блок, в котором создают файл
  */
-        try {
-            Files.createFile(Paths.get(f1));
-            System.out.println("Файл создан");
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
+
+        Path firstFile = Files.createFile(Paths.get(f1));
+        System.out.println("Файл создан");
+        Path secondDir = Files.createDirectory(Paths.get("./newDir"));
+        System.out.println("Директория добавлена");
+
 /*
     Блок, в котором переименовывают файл
  */
+
         try {
             boolean rename = file1.renameTo(file2);
             if (rename) {
@@ -52,7 +50,8 @@ public class FileCreated {
     Блок, в котором копируют файл
  */
         try {
-            Files.copy(firstDir, secondDir);
+
+            Files.copy(firstFile, secondDir);
             System.out.println("Файл скопирован");
         } catch (IOException e) {
             System.out.println(e.getMessage());
@@ -60,14 +59,12 @@ public class FileCreated {
 /*
     Блок, в котором удалют файл
  */
-
-            try {
-                System.out.println("Файл удален");
-                Files.delete(Paths.get(f1));
-            } catch (IOException ex) {
-                System.out.println(ex.getMessage());
-            }
-
+        try {
+            System.out.println("Файл удален");
+            Files.delete(firstFile);
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
 
     }
 }
