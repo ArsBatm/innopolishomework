@@ -32,29 +32,30 @@ public class FileCreated {
 
         Path firstFile = Files.createFile(Paths.get(f1));
         System.out.println("Файл создан");
-        Path secondDir = Files.createDirectory(Paths.get("./newDir"));
+        Files.createDirectory(Paths.get("./newDir"));
         System.out.println("Директория добавлена");
-
-/*
-    Блок, в котором переименовывают файл
-
- */
-        try {
-            boolean rename = file1.renameTo(file2);
-            if (rename) {
-                System.out.println("Файл переименован");
-            }
-        } catch (NullPointerException e) {
-            System.out.println(e.getMessage());
-        }
 /*
     Блок, в котором копируют файл
  */
         try {
 
-            Files.copy(firstFile, secondDir.resolve(firstFile.getFileName()), StandardCopyOption.REPLACE_EXISTING);
+            Files.copy(firstFile, Paths.get("./newDir/newFile2.txt"), StandardCopyOption.REPLACE_EXISTING);
             System.out.println("Файл скопирован");
         } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+
+/*
+    Блок, в котором переименовывают файл
+ */
+
+        try {
+            boolean rename = file1.renameTo(file2);
+            if (rename) {
+
+                System.out.println("Файл переименован");
+            }
+        } catch (NullPointerException e) {
             System.out.println(e.getMessage());
         }
 /*
