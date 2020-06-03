@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 
 /**
  * Класс создающий, переименовывающий, копирующий и удаляющий файл
@@ -36,8 +37,8 @@ public class FileCreated {
 
 /*
     Блок, в котором переименовывают файл
- */
 
+ */
         try {
             boolean rename = file1.renameTo(file2);
             if (rename) {
@@ -51,7 +52,7 @@ public class FileCreated {
  */
         try {
 
-            Files.copy(firstFile, secondDir);
+            Files.copy(firstFile, secondDir.resolve(firstFile.getFileName()), StandardCopyOption.REPLACE_EXISTING);
             System.out.println("Файл скопирован");
         } catch (IOException e) {
             System.out.println(e.getMessage());
@@ -65,6 +66,5 @@ public class FileCreated {
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
-
     }
 }
