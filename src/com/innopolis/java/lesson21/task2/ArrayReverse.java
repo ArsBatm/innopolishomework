@@ -1,5 +1,7 @@
 package innopolis.java.lesson21.task2;
 
+import java.util.Arrays;
+
 /**
  * Класс для реверса массива
  */
@@ -12,18 +14,26 @@ public class ArrayReverse {
  */
         int[] array = {34, 545, 421, 476, 787, 876};
 /*
-    Переменная ссылки на последнюю ячейку массива
+    Массив до реверса
  */
-        int rightStep = array.length - 1;
+        System.out.println("Массив до реверса:");
+        for (int i: array) {
+            System.out.println(i);
+        }
 /*
     Цикл реверса одномерного массива
  */
-        for (int leftStep = 0; leftStep < rightStep; leftStep++, rightStep--) {
+        for (int leftStep = 0, rightStep = array.length - 1; leftStep < rightStep; leftStep++, rightStep--) {
             int temp = array[leftStep];
             array[leftStep] = array[rightStep];
             array[rightStep] = temp;
-            System.out.println(array[leftStep]);
         }
-
+/*
+    Массив после реверса
+ */
+        System.out.println("Массив после реверса:");
+        for (int j: array) {
+            System.out.println(j);
+        }
     }
 }
